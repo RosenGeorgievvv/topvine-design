@@ -4,7 +4,7 @@ import main from '../../assets/main.png'
 
 const Main = () => {
   return (
-    <Box position="relative" width="100%" height="100vh">
+    <Box position="relative" width="auto" height="auto">
       <Image
         src={main}
         alt="Waterpark background"
