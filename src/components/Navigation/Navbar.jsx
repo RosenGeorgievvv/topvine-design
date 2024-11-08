@@ -1,68 +1,64 @@
-import { Box, Flex, Input, IconButton, Spacer, Image, HStack } from "@chakra-ui/react";
-import { FaShoppingCart, FaUser, FaBars } from "react-icons/fa";
-import { FiSearch } from "react-icons/fi";
+import { Box, Flex, Input, IconButton, Image, HStack, Text } from "@chakra-ui/react";
+import { FaBars } from "react-icons/fa";
 import Logo from "../../assets/Group 300.svg";
+import basketIcon from '../../assets/basket.svg';
+import magnifierIcon from '../../assets/magnifier.svg';
+import userIcon from '../../assets/user.svg';
 
 function Navbar() {
   return (
-    <Box bg="blue.900" color="white" w="100vw" position="fixed" top={0} px={6} py={6} zIndex={10}>
-      <Flex align="center" maxW="100" mx="auto" w="100%">
+    <Box bg="rgba(0, 35, 69, 1)" color="white" w="100vw" position="fixed" top={0} px={8} py={10} zIndex={10}>
+      <Flex align="center" maxW="2000px" mx="auto" w="100%" justifyContent="space-between">
         
-        {/* Logo */}
-        <HStack spacing={2}>
-          <Image src={Logo} alt="Fluidtrol Logo" boxSize="40px" />
+        <HStack>
+          <Image src={Logo} alt="Fluidtrol Logo" boxSize="50px" w="auto" />
         </HStack>
 
-        <Spacer />
-
-        {/* Search bar */}
-        <Flex align="center" bg="gray.600" borderRadius="md" px={2} py={1} maxW="400px" w="100%">
+        {/* Centered Search bar */}
+        <Flex align="center" bg="rgba(255, 255, 255, 0.5)" borderRadius="l3" px={4} py={1} maxW="400px" w="100%" mx={8}>
           <Input
-            variant="unstyled"
             placeholder="Search product, model, sku, keywords..."
-            _placeholder={{ color: "gray.300" }}
+            _placeholder={{ color: "rgba(255, 255, 255, 0.7)" }}
             color="white"
             mr={2}
           />
           <IconButton
-            icon={<FiSearch />}
+            icon={<Image src={magnifierIcon} alt="Search Icon" boxSize="16px" />}
             aria-label="Search"
-            colorScheme="gray"
+            colorScheme="whiteAlpha"
             size="sm"
             variant="ghost"
           />
         </Flex>
 
-        <Spacer />
-
-        {/* Icons */}
-        <HStack spacing={4}>
+        {/* Icons aligned to the right */}
+        <HStack spacing={6}>
           <Flex direction="column" align="center">
             <IconButton
-              icon={<FaShoppingCart />}
+              icon={<Image src={basketIcon} alt="Cart Icon" boxSize="24px" />}
               aria-label="Cart"
-              colorScheme="whiteAlpha"
               variant="ghost"
+              _hover={{ bg: "transparent" }}
             />
-            <Box fontSize="xs">cart</Box>
+            <Text fontSize="xs" color="rgba(255, 255, 255, 0.7)">cart</Text>
           </Flex>
           <Flex direction="column" align="center">
             <IconButton
-              icon={<FaUser />}
+              icon={<Image src={userIcon} alt="User Icon" boxSize="24px" />}
               aria-label="Login"
-              colorScheme="whiteAlpha"
               variant="ghost"
+              _hover={{ bg: "transparent" }}
             />
-            <Box fontSize="xs">login</Box>
+            <Text fontSize="xs" color="rgba(255, 255, 255, 0.7)">login</Text>
           </Flex>
           <Flex direction="column" align="center">
             <IconButton
-              icon={<FaBars />}
+              icon={<FaBars color="rgba(255, 255, 255, 0.7)" />}
               aria-label="Menu"
-              colorScheme="whiteAlpha"
               variant="ghost"
+              _hover={{ bg: "transparent" }}
             />
-            <Box fontSize="xs">menu</Box>
+            <Text fontSize="xs" color="rgba(255, 255, 255, 0.7)">menu</Text>
           </Flex>
         </HStack>
       </Flex>
