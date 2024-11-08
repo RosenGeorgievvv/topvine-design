@@ -5,7 +5,7 @@ import facebookIcon from "../../assets/facebook2.svg";
 
 function Footer() {
   return (
-    <Box bg="rgba(0, 35, 69, 1)" color="white" w="100vw" py={8}>
+    <Box bg="rgba(0, 35, 69, 1)" color="white" w="auto" py={8}>
       <Flex
         align="center"
         justify="space-between"
