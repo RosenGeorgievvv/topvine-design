@@ -4,18 +4,22 @@ import itemOne from '../../assets/itemOne.png';
 import itemTwo from '../../assets/itemTwo.png';
 import itemThree from '../../assets/itemThree.png';
 
-const Products = () => {
+const Products = ({ title = 'Product Categories', showHeader = true}) => {
   return (
     <Box textAlign="center" p={6} >
-      <Heading as="h1" fontSize="48px" mb={4} p="50px 50px" color="rgba(0, 35, 69, 1)" justifyContent="center" fontWeight="bold">
-        Shop Fluidtrol
-      </Heading>
-      <Button color="white" mb={8} bg="rgba(82, 166, 215, 1)" fontSize="18px" fontWeight="bold" width="300px" borderRadius="20px">
-        View All Products
-      </Button>
+       {showHeader && (
+        <>
+          <Heading as="h1" fontSize="48px" mb={4} p="50px 50px" color="rgba(0, 35, 69, 1)" justifyContent="center" fontWeight="bold">
+            Shop Fluidtrol
+          </Heading>
+          <Button color="white" mb={8} bg="rgba(82, 166, 215, 1)" fontSize="18px" fontWeight="bold" width="300px" borderRadius="20px">
+            View All Products
+          </Button>
+        </>
+      )}
 
       <Box bg="rgba(0, 35, 69, 1)" color="white" py={2} mb={6} textAlign="start" borderRadius="7px">
-        <Text fontSize="16px" fontWeight="bold" ml="20px">Product Categories</Text>
+        <Text fontSize="16px" fontWeight="bold" ml="20px">{title}</Text>
       </Box>
 
       <Stack
