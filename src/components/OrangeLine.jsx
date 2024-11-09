@@ -4,7 +4,7 @@ import { Box } from '@chakra-ui/react';
 const OrangeLine = () => {
   return (
     <div>
-        <Box bg="orange" height="4px" width="100%" mt={8} />
+        <Box bg="orange" height="4px" width="100%" />
     </div>
   )
 }
