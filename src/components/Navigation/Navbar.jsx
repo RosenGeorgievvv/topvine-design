@@ -1,4 +1,5 @@
 import { Box, Flex, Input, IconButton, Image, HStack, Text } from "@chakra-ui/react";
+import { LuSearch } from "react-icons/lu"
 import Logo from "../../assets/Group 300.svg";
 
 function Navbar() {
@@ -18,12 +19,9 @@ function Navbar() {
             border="none"
             mr={2}
           />
-          <IconButton
-            icon={<Image src="../../assets/magnifier.png" alt="Search Icon" boxSize="16px"  />}
-            aria-label="Search"
-            bg="none"
-            size="sm"
-          />
+          <IconButton bg="none" color='white'>
+            <LuSearch />
+          </IconButton>
         </Flex>
 
         {/* Icons aligned to the right */}
