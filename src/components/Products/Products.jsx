@@ -18,7 +18,7 @@ const Products = ({ title = 'Product Categories', showHeader = true}) => {
         </>
       )}
 
-      <Box bg="rgba(0, 35, 69, 1)" color="white" py={2} mb={6} textAlign="start" borderRadius="7px">
+      <Box bg="rgba(0, 35, 69, 1)" color="white" py={2} ml="17%" mb={6} textAlign="start" borderRadius="7px" w='65%' >
         <Text fontSize="16px" fontWeight="bold" ml="20px">{title}</Text>
       </Box>
 
