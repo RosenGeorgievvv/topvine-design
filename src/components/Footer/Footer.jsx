@@ -7,51 +7,64 @@ function Footer() {
   return (
     <Box bg="rgba(0, 35, 69, 1)" color="white" w="auto" py={8}>
       <Flex
+        direction={{ base: "column", md: "row" }}
         align="center"
         justify="space-between"
         maxW="1600px"
         mx="auto"
-        px={1}
+        px={4}
         wrap="wrap"
+        textAlign={{ base: "center", md: "left" }}
       >
-        {/*Left Side*/}
 
-        <VStack align="flex-start" color="rgba(255, 255, 255, 0.7)">
-          <Text fontSize="12px">
-            © 2024 Fluidtrol Process Technologies, Inc.
-          </Text>
-          <Text fontSize="12px">All Rights Reserved</Text>
-        </VStack>
-
-        {/* Center Details */}
-        <VStack textAlign="center" spacing={1}>
+        <VStack 
+          spacing={1} 
+          order={{ base: 1, md: 2 }} 
+          mb={{ base: 4, md: 0 }}
+          textAlign={{ base: "center", md: "left" }}
+        >
           <Text
-            fontSize="24px"
+            fontSize={{ base: "18px", md: "24px" }}
             fontWeight="bold"
             color="rgba(255, 255, 255, 0.7)"
           >
             For Customer Service Call
           </Text>
-          <Text fontSize="48px" fontWeight="bold">
+          <Text fontSize={{ base: "32px", md: "48px" }} fontWeight="bold">
             888-551-0511
           </Text>
-          <Text fontSize="18px" color="rgba(255, 255, 255, 1)">
+          <Text fontSize={{ base: "14px", md: "18px" }} color="rgba(255, 255, 255, 1)">
             or send an email to: fpt@fluidtrol.com
           </Text>
         </VStack>
 
-        {/* Right Side */}
-        <HStack spacing={4}>
+        <HStack 
+          spacing={4} 
+          order={{ base: 2, md: 3 }} 
+          mb={{ base: 4, md: 0 }}
+          justifyContent={{ base: "center", md: "flex-end" }}
+        >
           <Box margin="3">
-            <Image src={linkedinIcon} alt="LinkedIn Icon" boxSize="32px" />
+            <Image src={linkedinIcon} alt="LinkedIn Icon" boxSize={{ base: "24px", md: "32px" }} />
           </Box>
           <Box margin="3">
-            <Image src={twitterIcon} alt="Twitter Icon" boxSize="32px" />
+            <Image src={twitterIcon} alt="Twitter Icon" boxSize={{ base: "24px", md: "32px" }} />
           </Box>
           <Box margin="3">
-            <Image src={facebookIcon} alt="Facebook Icon" boxSize="32px" />
+            <Image src={facebookIcon} alt="Facebook Icon" boxSize={{ base: "24px", md: "32px" }} />
           </Box>
         </HStack>
+
+        <VStack 
+          align={{ base: "center", md: "flex-start" }} 
+          color="rgba(255, 255, 255, 0.7)" 
+          order={{ base: 3, md: 1 }}
+        >
+          <Text fontSize={{ base: "10px", md: "12px" }}>
+            © 2024 Fluidtrol Process Technologies, Inc.
+          </Text>
+          <Text fontSize={{ base: "10px", md: "12px" }}>All Rights Reserved</Text>
+        </VStack>
       </Flex>
     </Box>
   );
