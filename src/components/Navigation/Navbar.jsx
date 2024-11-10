@@ -1,6 +1,9 @@
-import { Box, Flex, Input, IconButton, Image, HStack, Text } from "@chakra-ui/react";
+import { Box, Flex, Input, IconButton, Image, HStack, Text, Icon } from "@chakra-ui/react";
 import { LuSearch } from "react-icons/lu"
 import Logo from "../../assets/Group 300.svg";
+import plus from '../../assets/plus.png';
+import login from '../../assets/user.png';
+import cart from '../../assets/cart.png';
 
 function Navbar() {
   return (
@@ -12,7 +15,7 @@ function Navbar() {
         </HStack>
 
         {/* Centered Search bar */}
-        <Flex align="center" bg="rgba(255, 255, 255, 0.5)" borderRadius="l3" px={4} py={1} maxW="400px" w="100%" mx={8}>
+        <Flex align="center" bg="rgba(255, 255, 255, 0.5)" borderRadius="l3" px={3} py={1} maxW="400px" w="100%" mx={8}>
           <Input
             placeholder="Search product, model, sku, keywords..."
             _placeholder={{ color: "rgba(255, 255, 255, 0.7)" }}
@@ -26,31 +29,22 @@ function Navbar() {
 
         {/* Icons aligned to the right */}
         <HStack spacing={6}>
-          <Flex direction="column" align="center" >
-            <IconButton
-              icon={<Image src="../../assets/basket.png" alt="Cart Icon" boxSize="24px" />}
-              aria-label="Cart"
-              bg="none"
-              _hover={{ bg: "transparent" }}
-            />
+          <Flex direction="column" align="center" mr="25px" >
+            <IconButton bg="none">
+              <Image src={cart} alt="Cart" boxSize="35px" />
+            </IconButton>
             <Text fontSize="xs" fontWeight="bold" color="rgba(255, 255, 255, 0.7)">cart</Text>
           </Flex>
-          <Flex direction="column" align="center">
-            <IconButton
-              icon={<Image src="../../assets/user.png" alt="User Icon" boxSize="24px" />}
-              aria-label="Login"
-              bg="none"
-              _hover={{ bg: "transparent" }}
-            />
+          <Flex direction="column" align="center" mr="25px">
+            <IconButton bg="none" >
+              <Image src={login} alt="Menu" boxSize="32px" />
+              </IconButton>
             <Text fontSize="xs" fontWeight="bold" color="rgba(255, 255, 255, 0.7)">login</Text>
           </Flex>
           <Flex direction="column" align="center">
-            <IconButton
-              icon={<Image src="../../assets/plus.png" alt="Menu" boxSize="24p" />}
-              aria-label="Menu"
-              bg="none"
-              _hover={{ bg: "transparent" }}
-            />
+            <IconButton bg="none">
+              <Image src={plus} alt="User Icon" boxSize="22px" />
+            </IconButton>
             <Text fontSize="xs" fontWeight="bold" color="rgba(255, 255, 255, 0.7)">menu</Text>
           </Flex>
         </HStack>
