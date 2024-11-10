@@ -8,7 +8,7 @@ const Main = () => {
       position="relative"
       width="100%"
       height="100vh"
-      pt={{ base: "100px", md: "0" }} // Adds top padding on smaller screens to prevent overlap with header
+      pt={{ base: "100px", md: "0" }} 
     >
       <Image
         src={main}
@@ -19,7 +19,7 @@ const Main = () => {
       />
       <Box
         position="absolute"
-        top={{ base: "25%", md: "15%" }} // 25% top for small screens and 15% for above
+        top={{ base: "25%", md: "15%" }} 
         left={{ base: "70%", lg: "60%", xl: "65%" }}
         color="white"
         maxWidth="600px"
@@ -27,7 +27,7 @@ const Main = () => {
         px={{ base: 4, md: 0 }}
       >
         <Text
-          fontSize={{ base: "20px", md: "36px", lg: "48px" }} // Smaller font-size for mobile
+          fontSize={{ base: "20px", md: "36px", lg: "48px" }} 
           fontWeight="bold"
           color="rgba(0, 35, 69, 1)"
           lineHeight="1.2"
@@ -37,7 +37,7 @@ const Main = () => {
           The Aquatic Professionals <br /> Number One Choice
         </Text>
         <Text
-          fontSize={{ base: "14px", md: "22px", lg: "28px" }} // Font size adjusted for better readability on small screen resolution
+          fontSize={{ base: "14px", md: "22px", lg: "28px" }} 
           fontWeight="normal"
           color="rgba(0, 35, 69, 0.7)"
           mt={2}

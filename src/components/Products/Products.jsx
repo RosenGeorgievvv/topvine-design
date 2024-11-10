@@ -21,12 +21,13 @@ const Products = ({ title = 'Product Categories', showHeader = true }) => {
           </Heading>
           <Button
             color="white"
-            mb={8}
+            mb={10}
             bg="rgba(82, 166, 215, 1)"
             fontSize={{ base: "14px", md: "16px", lg: "18px" }}
             fontWeight="bold"
-            width={{ base: "200px", md: "250px", lg: "300px" }}
+            width={{ base: "60%", md: "50%", lg: "40%" }}
             borderRadius="20px"
+            w="17%"
           >
             View All Products
           </Button>
@@ -50,15 +51,21 @@ const Products = ({ title = 'Product Categories', showHeader = true }) => {
 
       <Stack
         direction={{ base: 'column', md: 'row' }}
-        justify="center"
-        justifyContent="space-between"
+        wrap="wrap"
+        justify="space-between"
         align="center"
+        spacing={{ base: 6, md: 4 }}
         pb="5px"
         pt="40px"
         mx="auto"
-        maxWidth={{ base: "100%", md: "80%", lg: "75%" }}
+        maxWidth={{ base: "100%", md: "85%", lg: "80%", xl: "75%" }}
       >
-        <Box textAlign="center" width={{ base: "100%", md: "300px" }} pb="10%">
+        <Box
+          textAlign="center"
+          flex="1"
+          width={{ base: "100%", md: "48%", lg: "30%" }}
+          pb={{ base: "5%", md: "10%" }}
+        >
           <Text fontWeight="bold" fontSize={{ base: "18px", md: "22px" }} color="rgba(0, 0, 0, 1)">
             Aquatic
           </Text>
@@ -72,13 +79,18 @@ const Products = ({ title = 'Product Categories', showHeader = true }) => {
             variant="solid"
             bg="rgba(82, 166, 215, 1)"
             borderRadius="22px"
-            w={{ base: "200px", md: "300px" }}
+            width="80%"
           >
             View Aquatic Strainers
           </Button>
         </Box>
 
-        <Box textAlign="center" width={{ base: "100%", md: "300px" }} pb="10%" >
+        <Box
+          textAlign="center"
+          flex="1"
+          width={{ base: "100%", md: "48%", lg: "30%" }}
+          pb={{ base: "5%", md: "10%" }}
+        >
           <Text fontWeight="bold" fontSize={{ base: "18px", md: "22px" }} color="rgba(0, 0, 0, 1)">
             General Water
           </Text>
@@ -92,14 +104,19 @@ const Products = ({ title = 'Product Categories', showHeader = true }) => {
             color="rgba(82, 166, 215, 1)"
             border="1px solid rgba(82, 166, 215, 1)"
             borderRadius="22px"
-            w={{ base: "200px", md: "300px" }}
+            width="80%"
             fontWeight="bold"
           >
             View Water Strainers
           </Button>
         </Box>
 
-        <Box textAlign="center" width={{ base: "100%", md: "300px" }} pb="10%">
+        <Box
+          textAlign="center"
+          flex="1"
+          width={{ base: "100%", md: "48%", lg: "30%" }}
+          pb={{ base: "5%", md: "10%" }}
+        >
           <Text fontWeight="bold" fontSize={{ base: "18px", md: "22px" }} color="rgba(0, 0, 0, 1)">
             Industrial
           </Text>
@@ -113,7 +130,7 @@ const Products = ({ title = 'Product Categories', showHeader = true }) => {
             color="rgba(82, 166, 215, 1)"
             border="1px solid rgba(82, 166, 215, 1)"
             borderRadius="22px"
-            w={{ base: "200px", md: "300px" }}
+            width="80%"
             fontWeight="bold"
           >
             View Industrial Strainers

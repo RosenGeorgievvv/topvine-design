@@ -17,9 +17,9 @@ function Footer() {
         textAlign={{ base: "center", md: "left" }}
       >
 
-        <VStack 
-          spacing={1} 
-          order={{ base: 1, md: 2 }} 
+        <VStack
+          spacing={1}
+          order={{ base: 1, md: 2 }}
           mb={{ base: 4, md: 0 }}
           textAlign={{ base: "center", md: "left" }}
         >
@@ -30,17 +30,40 @@ function Footer() {
           >
             For Customer Service Call
           </Text>
-          <Text fontSize={{ base: "32px", md: "48px" }} fontWeight="bold">
+
+          <Text
+            fontSize={{ base: "32px", md: "48px" }}
+            fontWeight="bold"
+            _hover={{
+              cursor: "pointer",
+              color: "blue.500",
+              textDecoration: "underline"
+            }}
+          >
             888-551-0511
           </Text>
-          <Text fontSize={{ base: "14px", md: "18px" }} color="rgba(255, 255, 255, 1)">
-            or send an email to: fpt@fluidtrol.com
+
+          <Text
+            fontSize={{ base: "14px", md: "18px" }}
+            color="rgba(255, 255, 255, 1)"
+          >
+            or send an email to:{" "}
+            <Text
+              as="span"
+              _hover={{
+                color: "blue.500",
+                textDecoration: "underline",
+                cursor: "pointer"
+              }}
+            >
+              fpt@fluidtrol.com
+            </Text>
           </Text>
         </VStack>
 
-        <HStack 
-          spacing={4} 
-          order={{ base: 2, md: 3 }} 
+        <HStack
+          spacing={4}
+          order={{ base: 2, md: 3 }}
           mb={{ base: 4, md: 0 }}
           justifyContent={{ base: "center", md: "flex-end" }}
         >
@@ -55,9 +78,9 @@ function Footer() {
           </Box>
         </HStack>
 
-        <VStack 
-          align={{ base: "center", md: "flex-start" }} 
-          color="rgba(255, 255, 255, 0.7)" 
+        <VStack
+          align={{ base: "center", md: "flex-start" }}
+          color="rgba(255, 255, 255, 0.7)"
           order={{ base: 3, md: 1 }}
         >
           <Text fontSize={{ base: "10px", md: "12px" }}>
