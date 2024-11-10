@@ -5,7 +5,7 @@ import './App.css';
 import Products from './components/Products/Products';
 import Solutions from './components/Solutions/Solutions';
 import Info from './components/Info/Info';
-import OrangeLine from './components/orangeLine';
+import OrangeLine from './components/OrangeLine';
 
 function App() {
   return (
