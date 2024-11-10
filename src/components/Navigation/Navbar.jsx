@@ -20,7 +20,7 @@ function Navbar() {
         <HStack
           w="full"
           justify="space-between"
-          mb={{ base: 4, md: 0}} // Add margin bottom for small screens
+          mb={{ base: 4, md: 0 }} // Add margin bottom for small screens
         >
           <Image src={Logo} alt="Fluidtrol Logo" boxSize="50px" w="auto" />
 
