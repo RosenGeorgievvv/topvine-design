@@ -1,9 +1,5 @@
 import { Box, Flex, Input, IconButton, Image, HStack, Text } from "@chakra-ui/react";
-import { FaBars } from "react-icons/fa";
 import Logo from "../../assets/Group 300.svg";
-import basketIcon from '../../assets/basket.svg';
-import magnifierIcon from '../../assets/magnifier.svg';
-import userIcon from '../../assets/user.svg';
 
 function Navbar() {
   return (
@@ -19,46 +15,45 @@ function Navbar() {
           <Input
             placeholder="Search product, model, sku, keywords..."
             _placeholder={{ color: "rgba(255, 255, 255, 0.7)" }}
-            color="white"
+            border="none"
             mr={2}
           />
           <IconButton
-            icon={<Image src={magnifierIcon} alt="Search Icon" boxSize="16px" />}
+            icon={<Image src="../../assets/magnifier.png" alt="Search Icon" boxSize="16px"  />}
             aria-label="Search"
-            colorScheme="whiteAlpha"
+            bg="none"
             size="sm"
-            variant="ghost"
           />
         </Flex>
 
         {/* Icons aligned to the right */}
         <HStack spacing={6}>
-          <Flex direction="column" align="center">
+          <Flex direction="column" align="center" >
             <IconButton
-              icon={<Image src={basketIcon} alt="Cart Icon" boxSize="24px" />}
+              icon={<Image src="../../assets/basket.png" alt="Cart Icon" boxSize="24px" />}
               aria-label="Cart"
-              variant="ghost"
+              bg="none"
               _hover={{ bg: "transparent" }}
             />
-            <Text fontSize="xs" color="rgba(255, 255, 255, 0.7)">cart</Text>
+            <Text fontSize="xs" fontWeight="bold" color="rgba(255, 255, 255, 0.7)">cart</Text>
           </Flex>
           <Flex direction="column" align="center">
             <IconButton
-              icon={<Image src={userIcon} alt="User Icon" boxSize="24px" />}
+              icon={<Image src="../../assets/user.png" alt="User Icon" boxSize="24px" />}
               aria-label="Login"
-              variant="ghost"
+              bg="none"
               _hover={{ bg: "transparent" }}
             />
-            <Text fontSize="xs" color="rgba(255, 255, 255, 0.7)">login</Text>
+            <Text fontSize="xs" fontWeight="bold" color="rgba(255, 255, 255, 0.7)">login</Text>
           </Flex>
           <Flex direction="column" align="center">
             <IconButton
-              icon={<FaBars color="rgba(255, 255, 255, 0.7)" />}
+              icon={<Image src="../../assets/plus.png" alt="Menu" boxSize="24p" />}
               aria-label="Menu"
-              variant="ghost"
+              bg="none"
               _hover={{ bg: "transparent" }}
             />
-            <Text fontSize="xs" color="rgba(255, 255, 255, 0.7)">menu</Text>
+            <Text fontSize="xs" fontWeight="bold" color="rgba(255, 255, 255, 0.7)">menu</Text>
           </Flex>
         </HStack>
       </Flex>
